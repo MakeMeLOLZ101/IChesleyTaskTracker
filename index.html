@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Tracker</h1>
+        
+        <div class="task-form">
+            <input type="text" id="taskName" placeholder="Task Name" required>
+            <textarea id="taskDescription" placeholder="Task Description"></textarea>
+            
+            <div class="form-row">
+                <select id="taskStatus">
+                    <option value="ToDo">To Do</option>
+                    <option value="InProgress">In Progress</option>
+                    <option value="Complete">Complete</option>
+                </select>
+                
+                <select id="taskPriority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                
+                <input type="date" id="taskDueDate">
+            </div>
+            
+            <button id="addTaskBtn" class="btn primary">Add Task</button>
+            <button id="updateTaskBtn" class="btn primary" style="display: none;">Update Task</button>
+        </div>
+
+        <div class="board-container">
+            <div class="board" id="todoBoard">
+                <h2>To Do</h2>
+                <div class="task-list" data-status="ToDo"></div>
+            </div>
+
+            <div class="board" id="inProgressBoard">
+                <h2>In Progress</h2>
+                <div class="task-list" data-status="InProgress"></div>
+            </div>
+
+            <div class="board" id="completeBoard">
+                <h2>Complete</h2>
+                <div class="task-list" data-status="Complete"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+</html>
